@@ -29,6 +29,7 @@ The post now should be available at your-domain.com/rsds/first-post
 * Change POSTER_DOMAIN to your domain
 * Change POST_DOMAIN to your domain
 * Change POST_PATH to your post path
+* Change BLOCK to https://instance.did-1.com/block/latest hash
 
 5. Execute post.sh to publish your post
 
