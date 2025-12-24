@@ -35,4 +35,4 @@ The post now should be available at your-domain.com/rsds/first-post
 
 Now your post should be visible on [https://reader.did-1.com/posts](https://reader.did-1.com/posts)
 
-You can also fetch posts via API for specific block like this https://instance.did-1.com/posts/blockId
+You can also fetch posts via API for specific block like this https://instance.did-1.com/posts/{blockId}
