@@ -1,10 +1,12 @@
 #!/bin/bash
 
 set -x
-POSTER_DOMAIN=ttrpg-ledger.com
-POST_DOMAIN=ttrpg-ledger.com
+POSTER_DOMAIN=example.com
+POST_DOMAIN=example.com
 POST_PATH=rsds/first-post
-BLOCK=000000000000000000001806733321b3b2e0cae0cbf02ab0ebca6a851be61084
+
+BLOCK=00000000000000000000dcee6f34a2e85de4fdd5b2b4c583b67f567ac4a3a594
+
 CONTENT=`curl -L http://$POST_DOMAIN/$POST_PATH/ > /tmp/content.html`
 HASH=`cat /tmp/content.html | sha256sum | awk '{print $1}'`
 SIG=`echo -n "$BLOCK/$POST_DOMAIN/$POST_PATH/$HASH" | openssl dgst -sha256 -sign did-private.pem | xxd -p | tr -d '\n'`
